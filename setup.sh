@@ -16,7 +16,7 @@ creteIfNotExists() {
 
 }
 
-creteIfNotExists ".bash_profile" "~/"
+creteIfNotExists ".bash_profile" "$HOME/"
 
 cat <<EOT >>~/.bash_profile
 
@@ -32,7 +32,7 @@ fi
 
 EOT
 
-creteIfNotExists ".bashrc" "~/"
+creteIfNotExists ".bashrc" "$HOME/"
 
 cat <<EOT >>~/.bashrc
 
@@ -68,7 +68,6 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 
 alias gm='git merge'
 
- 
 
 # Bash aliases
 
@@ -100,7 +99,6 @@ alias rm='rm -iv'
 
 alias work='cd /c/repos'
 
- 
 
 # Bash shell settings
 
@@ -108,13 +106,11 @@ alias work='cd /c/repos'
 
 shopt -s autocd
 
- 
 
 # Automatically fix directory name typos when changing directory.
 
 shopt -s cdspell
 
- 
 
 # Automatically expand directory globs and fix directory name typos whilst completing.
 
@@ -122,7 +118,6 @@ shopt -s cdspell
 
 shopt -s direxpand dirspell
 
- 
 
 # Enable the ** globstar recursive pattern in file and directory expansions.
 
@@ -130,7 +125,6 @@ shopt -s direxpand dirspell
 
 shopt -s globstar
 
- 
 
 # Ignore lines which begin with a <space> and match previous entries.
 
@@ -138,37 +132,31 @@ shopt -s globstar
 
 HISTCONTROL=ignoreboth:erasedups
 
- 
 
 # Ignore saving short- and other listed commands to the history file.
 
 HISTIGNORE=?:??:history
 
- 
 
 # The maximum number of lines in the history file.
 
 HISTFILESIZE=99999
 
- 
 
 # The number of entries to save in the history file.
 
 HISTSIZE=99999
 
- 
 
 # Set Bash to save each command to history, right after it has been executed.
 
 PROMPT_COMMAND='history -a'
 
- 
 
 # Save multi-line commands in one history entry.
 
 shopt -s cmdhist
 
- 
 
 # Append commands to the history file, instead of overwriting it.
 
@@ -178,7 +166,7 @@ shopt -s histappend histverify
 
 EOT
 
-creteIfNotExists "git-prompt.sh" "~/.config/git/"
+creteIfNotExists "git-prompt.sh" "$HOME//.config/git/"
 
 cat <<EOT >>~/.config/git/git-prompt.sh
 
@@ -232,7 +220,6 @@ PS1="$PS1"'\n'                 # new line
 
 PS1="$PS1"'$ '                 # prompt: always $
 
- 
 
 # Git status options
 
@@ -240,19 +227,16 @@ PS1="$PS1"'$ '                 # prompt: always $
 
 export GIT_PS1_SHOWSTASHSTATE=true
 
- 
 
 # shows $ if there are any stashes.
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 
- 
 
 # Shows % if there are any untracked files.
 
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
- 
 
 # shows <, >, <>, or = when your branch is behind, ahead, diverged from,
 
@@ -262,7 +246,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 EOT
 
-creteIfNotExists ".inputrc" "~/"
+creteIfNotExists ".inputrc" "$HOME//"
 
 cat <<EOT >>~/.inputrc
 
@@ -272,7 +256,6 @@ set bell-style none
 
 set echo-control-characters off
 
- 
 
 # The TAB key cycles forward through the completion choices.
 
@@ -280,7 +263,6 @@ set echo-control-characters off
 
 TAB: menu-complete
 
- 
 
 # The Shift-TAB key cycles backward through the completion choices.
 
@@ -288,7 +270,6 @@ TAB: menu-complete
 
 "\e[Z": menu-complete-backward
 
- 
 
 # The first TAB key press will display a list that match the given prefix.
 
@@ -296,43 +277,36 @@ TAB: menu-complete
 
 set menu-complete-display-prefix on
 
- 
 
 # Display completion matches upon the first press of the TAB key.
 
 #set show-all-if-ambiguous on
 
- 
 
 #Enable colors when completing filenames and directories.
 
 set colored-stats on
 
- 
 
 # Completion matches of multiple items highlight the matching prefix in color.
 
 set colored-completion-prefix on
 
- 
 
 # Ignore case when completing.
 
 set completion-ignore-case on
 
- 
 
 # Treat hypens and underscores as equivalent when completing.
 
 set completion-map-case on
 
- 
 
 # Append the / character to the end of symlinked directories when completing.
 
 set mark-symlinked-directories on
 
- 
 
 # Enable incremental history navigation with the UP and DOWN arrow keys.
 
