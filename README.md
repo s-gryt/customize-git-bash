@@ -26,10 +26,16 @@
  <br/>
 
 ## How to use this script to apply stylings:
-Download the script and run and 
-```
-source setup.sh
-```
+>⚠️ `always check the source code before running it on your machine!`
+- Download the script and run and 
+    ```
+    source setup.sh
+    ```
+### OR
+- run it in your terminal:
+    ```
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Sgryts/customize-git-bash/main/setup.sh)"
+    ```
  ✨And your Git Bash Shell will look like this✨
 
 ![alt text](gitbash.png "Title")
