@@ -166,7 +166,7 @@ shopt -s histappend histverify
 
 EOT
 
-creteIfNotExists "git-prompt.sh" "$HOME//.config/git/"
+creteIfNotExists "git-prompt.sh" "$HOME/.config/git/"
 
 cat <<EOT >>~/.config/git/git-prompt.sh
 
@@ -246,7 +246,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 EOT
 
-creteIfNotExists ".inputrc" "$HOME//"
+creteIfNotExists ".inputrc" "$HOME/"
 
 cat <<EOT >>~/.inputrc
 
